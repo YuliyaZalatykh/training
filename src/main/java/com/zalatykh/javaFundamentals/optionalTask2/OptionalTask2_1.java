@@ -43,5 +43,25 @@ public class OptionalTask2_1 {
             }
             System.out.println();
         }
+
+        System.out.println("which line do you want to sort? ");
+        int line = scanner.nextInt() - 1;
+        for (int iteration = 0; iteration < arraySize - 1; iteration++) {
+            for (int j = 0; j < array.length - 1; j++) {
+                if (array[line][j] > array[line][j + 1]) {
+                    int temp = array[line][j];
+                    array[line][j] = array[line][j + 1];
+                    array[line][j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println("Sorted array");
+        for (int i = 0; i < arraySize; i++) {
+            for (int j = 0; j < arraySize; j++) {
+                System.out.printf("%2d", array[i][j]);
+            }
+            System.out.println();
+        }
     }
 }
